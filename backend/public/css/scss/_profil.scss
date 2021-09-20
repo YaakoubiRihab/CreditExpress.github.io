@@ -1,0 +1,160 @@
+
+.p-pro {
+    .paper {
+      margin: 32px auto 0px auto;
+      padding: 22px 32px;
+      text-align: left;
+      width: 100%;
+    }
+
+    #paper-bg-green{
+      background-color: $primary-color;
+      color: #fff;
+    }
+  
+    .pro-user {
+      h4 {
+        color: $primary-color;
+        margin-bottom: 8px;
+      }
+      .fa-ul {
+        margin-left: 1.5rem;
+        margin-bottom: 0;
+      }
+  
+      .fa-li {
+        color: $primary-color;
+      }
+    }
+  
+  
+    .pro-ntf {
+      position: relative;
+      height: 167px;
+      h3 {
+        color: #fff;
+      }
+      .vertical-line {
+        border-left: 1px solid #d1d1d1;
+        height: 70%;
+        position: absolute;
+        left: 50%;
+      }
+    }
+  
+    .pro-mnu {
+      ul {
+        list-style: none;
+      }
+      li {
+        margin: 0;
+        width: 100%;
+        padding: 12px;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+  
+        a:hover {
+          text-decoration: underline;
+        }
+  
+        .active {
+          text-decoration: underline;
+        }
+      }
+    }
+    .pro-main {
+      .profil-table-demande {
+        table {
+          width: 100%;
+          text-align: center;
+          border-collapse: collapse;
+        }
+        table td,
+        table th {
+          padding: 12px 2px;
+        }
+        table tbody tr {
+          border-top: 1px solid #d1d1d1;
+        }
+  
+        table thead tr th:first-child,
+        table tbody tr td:first-child {
+          text-align: left;
+        }
+        table thead th {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.25px;
+        }
+        table tbody td {
+          font-size: 17px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+        }
+      }
+      .detail-demande {
+        width: 50%;
+        min-width: 200px;
+        margin: 0 auto 0 0;
+        .resume-sim-list {
+          dt {
+            text-align: left;
+            font-weight: 400;
+            float: left;
+          }
+          dd {
+            text-align: right;
+            margin-bottom: 4px;
+          }
+          hr {
+            margin: 4px auto;
+          }
+        }
+      }
+    }
+    .pro-p-agenda {
+      .date-rdv,
+      .rest-rdv {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+      }
+      .date-rdv {
+        text-align: center;
+        height: 164px;
+        h2 {
+          font-weight: 500;
+          padding-top: 24px;
+        }
+      }
+      .rest-rdv {
+        padding: 22px;
+        .rdv-time {
+          float: right;
+          font-weight: 600;
+        }
+        h6 {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .p-pro-parametres{
+      p.info{
+      display: inline;
+      margin-right: 32px;
+      }
+      .change-icon{
+        padding: 6px;
+        color: $black2;
+        border-radius: 4px;
+        background-color: $black4;
+        &:hover{
+          background-color: $primary-color-op002;
+          color: $primary-color;
+          box-shadow: inset 0 0 0 1px $primary-color;
+        }
+      }
+      
+    }
+  }

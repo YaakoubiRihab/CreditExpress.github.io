@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Votre Profile</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/admin/backOffice">CréditUBCI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/admin/backOffice"></span>Espace Back Office</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/nouveauxDossiersOffice"></span>Nouveaux dossiers</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/dossiersDeloques"></span>Dossiers Débloqués</a>
+        </li>
+      </ul>
+      <a href="/logout" class="btn btn-danger">Déconnection</a>
+  
+  </nav>
+    <div class="container p-5">
+      <a href="/nouveauxDossiersOffice">Nouveaux dossiers :</a><br><br><hr><br>
+      <h3>Le crédit est débloqué,cliquez ici pour rendre a l'accueil</h3>
+      <a href="/admin/backOffice"class="btn btn-primary">Accueil</a>
+
+    </div>
+</body>
+</html>

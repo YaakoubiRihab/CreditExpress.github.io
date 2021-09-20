@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Or Register</title>
+    <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">CréditUBCI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/simulation">Simulation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact"></span>Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/inscription"></span>Inscription</a>
+        </li>
+      </ul>
+
+      <a href="login_enregistrement" class="btn btn-success btn-rounded">Connexion</a>
+ 
+
+  </nav>
+    <div class="container p-5">
+        <h1 class="text-center mb-5 text-uppercase text-muted">connection et enregistrement</h1>
+        <div class="row">
+            <div class="col-sm-5 bg-light border rounded py-3">
+                <h2 class="text-center">connection</h2>
+                <form action="" method="POST">
+                    <div class="form-group">
+                      <label for="_email">email</label>
+                      <input type="email" name="user_email" id="_email" class="form-control" placeholder="email" rnodeequired>
+                    </div>
+                    <div class="form-group">
+                      <label for="_pass">Mot de passe</label>
+                      <input type="password" name="user_pass" id="_pass" class="form-control" placeholder="Mot de passe" required>
+                    </div>
+                    <% if (locals.login_errors) { 
+                      login_errors.forEach(function(error_msg){ %>
+                      <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                    <% });
+                    } %>
+                    <button type="submit" class="btn btn-primary">connection</button>
+                </form>
+            </div>
+            <div class="col-sm-6 bg-light rounded border py-3 offset-sm-1">
+                <h2 class="text-center">Enregistrement</h2>
+
+                <form action="/enregistrement" method="POST" novalidate>
+                        <div class="form-group">
+                          <label for="_rname">Nom</label>
+                          <input type="text" name="user_name" id="_rname" class="form-control" placeholder="Nom" value="<%= (locals.old_data) ? old_data.user_name : ''; %>" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="_rprenom">Prenom</label>
+                          <input type="text" name="user_prenom" id="_rprenom" class="form-control" placeholder="Prenom" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="_remail">Email</label>
+                          <input type="email" name="user_email" id="_remail" class="form-control" placeholder="Email"  value="<%= (locals.old_data) ? old_data.user_prenom : ''; %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="_rdateN">Date de naissance</label>
+                            <input type="date" name="user_daten" id="_rdateN" class="form-control" placeholder="Date de naissance" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rlieu">Lieu de naissance</label>
+                            <input type="text" name="user_lieu" id="_rlieu" class="form-control" placeholder="Lieu de naissance" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_radresse">Adresse</label>
+                            <input type="text" name="user_adresse" id="_radresse" class="form-control" placeholder="Adresse" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rville">Ville</label>
+                            <input type="text" name="user_ville" id="_rville" class="form-control" placeholder="Ville" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rcode">Code postal</label>
+                            <input type="text" name="user_code" id="_rcode" class="form-control" placeholder="Code postal" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rcin">CIN</label>
+                            <input type="text" name="user_cin" id="_rcin" class="form-control" placeholder="CIN" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rmobile">Tél.Mobile</label>
+                            <input type="text" name="user_mobile" id="_rmobile" class="form-control" placeholder="Tel mobile" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rdomicile">Tél.Domicile</label>
+                            <input type="text" name="user_domicile" id="_rdomicile" class="form-control" placeholder="Tel domicile" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rnum">Num.Compte</label>
+                            <input type="text" name="user_num" id="_rnum" class="form-control" placeholder="Numero de compte" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rsalaire">Salaire</label>
+                            <input type="text" name="user_salaire" id="_rsalaire" class="form-control" placeholder="Salaire" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_retat">Etat Familial</label>
+                            <input type="text" name="user_etat" id="_retat" class="form-control" placeholder="Etat Familial" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="_rpasse">Mot de passe</label>
+                            <input type="password" name="user_passe" id="_rpasse" class="form-control" placeholder="Mot de passe" required>
+                          </div>
+                        <% if (locals.register_error) { 
+                          register_error.forEach(function(error_msg){ %>
+                          <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                        <% });
+                        } %>
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                    </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

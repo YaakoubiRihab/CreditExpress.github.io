@@ -1,0 +1,140 @@
+
+// vars
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap");
+$font: "Work Sans", sans-serif;
+$black1: rgba(0, 0, 0, 0.87);
+$black2: rgba(0, 0, 0, 0.54);
+$black3: rgba(0, 0, 0, 0.38);
+$black4: rgba(0, 0, 0, 0.1);
+$primary-color: #00975f;
+$primary-color-light: #2db381;
+$primary-color-dark: #007d5c;
+$primary-color-op002: rgba(0, 151, 95, 0.05);
+$primary-color-op05: rgba(0, 151, 95, 0.5);
+
+// links
+a {
+  text-decoration: none;
+  color:$primary-color;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+a:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+// text styles
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 102px;
+  font-weight: 300;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 51px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+h6 {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+.t-subtitle-1 {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+}
+
+.t-subtitle-2 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+.t-body-2 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+@mixin t-button {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+}
+
+.t-button {
+  @include t-button;
+}
+
+@media (max-width:768px){
+  h1 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: -1.5px;
+  }
+  
+  h2 {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    line-height: normal;
+  }
+  
+  h3 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+}
+
+// paper style
+
+.paper {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

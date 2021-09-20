@@ -1,0 +1,32 @@
+//config
+
+@import "_config";
+@import "_form";
+// style.scss
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: $font;
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+
+
+
+//nav-bar
+@import "_navNfooter";
+@import "_regular-page";
+@import "_logsign";
+@import "_profil";
+@import "_landing";

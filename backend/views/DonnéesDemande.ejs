@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Or Register</title>
+    <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+   <form action="/config/donneesDemande" method="POST">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">CréditUBCI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/simulation/client">Simulation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/client"></span>Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/config"></span>Configuration</a>
+          </li>
+      </ul>
+
+      <a href="/logout" class="btn btn-danger">Déconnection</a>
+
+  </nav><br>
+  <div class="container">
+
+    <h3>Votre données de demande</h3>
+    <p> Le Rang : <%= rangCr %></p>
+    <p> Le Capital : <%= capital %></p>
+    <p> La Durée du crédit : <%= duréeCr %></p>
+    <p> Le Monsualité : <%= monsualité %></p>
+    <p> La Révenue : <%= révenue %></p>
+    <p> La Carte d'identité national : <%= id_national %></p>
+    <p> La Facture : <%= facture %></p>
+    <p> Le Contrat de travail : <%= contrat_travail %></p>
+    <p> Le Révenue de salaire : <%= revenu_sal %></p>
+    <a href="/config/donneesDemande">Modifier les données de votre demande</a><br>
+
+  </div>
+ 
+  </form>
+  </body>
+  </html>

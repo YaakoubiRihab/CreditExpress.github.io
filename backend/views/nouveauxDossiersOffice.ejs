@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Votre Profile</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <form action="" method="POST">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/admin/backOffice">CréditUBCI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/admin/backOffice"></span>Espace Back Office</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/nouveauxDossiersOffice"></span>Nouveaux dossiers</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/dossiersDeloques"></span>Dossiers Débloqués</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/configAdmin/mdp/boc"></span>Configuration</a>
+            </li>
+          </ul>
+          <a href="/logout" class="btn btn-danger">Déconnection</a>
+      
+      </nav>
+    <div class="container p-5">
+      <a href="/nouveauxDossiersOffice">Nouveaux dossiers :</a><br><br><hr><br>
+            <h3>Les Nouveaux Dossiers</h3><br><hr><br>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID Crédit</th>
+                  <th scope="col">ID Client</th>
+                  <th scope="col">N°Rang</th>
+                  <th scope="col">Capital</th>
+                  <th scope="col">Le durée de crédit</th>
+                  <th scope="col">La monsualité</th>
+                  <th scope="col">Autre révenue</th>
+                  <th scope="col">Carte d'identité national</th>
+                  <th scope="col">Facture (STEG/SONED)</th>
+                  <th scope="col">Contrat de travail</th>
+                  <th scope="col">Revenu de salaire</th>
+                  <th scope="col">Date de rendez-vous</th>
+                  <th scope="col">Etat de dossier</th>
+                  <th scope="col">Etat de signature</th>
+                  <th scope="col">Etat de crédit</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+              <% items.forEach(function(item,index){ %>
+                <tr>
+                  <td><%= item.idCrédit %></td>
+                  <td><%= item.id %></td>
+                  <td><%= item.rangCr %></td>
+                  <td><%= item.capital %></td>
+                  <td><%= item.duréeCr %></td>
+                  <td><%= item.monsualité %></td>
+                  <td><%= item.Autres_rév %></td>
+                  <td><%= item.id_national %></td>
+                  <td><%= item.facture %></td>
+                  <td><%= item.contrat_travail %></td>
+                  <td><%= item.revenu_sal %></td>
+                  <td><%= item.date_RDV %></td>
+                  <td><%= item.etat_dossier %></td>
+                  <td><%= item.etat_signature %></td>
+                  <td><%= item.etat_crédit %></td>
+
+                </tr>
+
+                <% }); %>
+              </tbody>
+            </table>
+    </div>
+  </form>
+</body>
+</html>

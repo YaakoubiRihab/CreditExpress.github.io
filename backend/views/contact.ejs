@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrédApp</title>
+    <link rel="stylesheet" href="/css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="/fas/css/all.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" id="navBar">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="/img/logo.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="" href="/">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="/simulationClient">Simulation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="/assistanceClient">Assistance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-nav" href="/logout">Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </nav>
+
+  
+
+
+     <main class="p-layo">
+        <div class="container">
+            <div class="row">
+                <div class="p-head col-12">
+                    <div class="paper">
+                        <div class="p-title">
+                            <h2>Contact</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <div class="row">
+                <div class="col-12 col-lg-4 ">
+                    <div class="paper resume-sim " style="height: -webkit-calc(100% - (32px));">
+                        <h6>Médiateur:</h6>
+                        <ul style="list-style:none;">
+                            <li>Monsieur Slaheddine BEN SALAH</li>
+                            <li>09 , Rue des fruits – Borj Baccouche – 2027 ARIANA</li>
+                            <li>
+                                E-mail : Slaheddine.b.s.s@gmail.com
+                            </li>
+                            <li>GSM : 98 346 525</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-simulation col-12 col-lg-8 ">
+                    <div class="paper ">
+
+
+                <h5 ></a>Un renseignement, une suggestion…
+                </h5>
+                 <hr />
+                 <h6 style="margin-bottom: 24px;">Envoyez-nous un message </h6>
+
+                <form action="mailto:monmail@mail.com" method="post" name="contact">
+                        <div class="inp-d filled">
+                            <!-- input nouveau mdp  -->
+                           <input type="text" class="inp" name="nameeez" required/>
+                           <label for="" class="inp-label" >Nom</label>
+                           <br />
+                           <label for="" class="t-subtitle-2 inp-message"></label>
+                           <i class="fa  inp-icon" aria-hidden="true"></i>
+                       </div>
+                
+                       <div class="inp-d filled">
+                        <!-- input  mdp  -->
+                       <input type="text" class="inp" name="adresfea" required/>
+                       <label for="" class="inp-label" >Adresse mail</label>
+                       <br />
+                       <label for="" class="t-subtitle-2 inp-message"></label>
+                       <i class="fa  inp-icon" aria-hidden="true"></i>
+                      </div>
+
+                      <div class="inp-d">
+                          <textarea name="message" id="" cols="30" rows="10" class="inp"></textarea>
+                          <label for="" class="inp-label" >Message</label>
+                      </div>
+                      <input type="submit" value="Validez" class="btn-pr" />
+                          </form>
+              
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+    </main>
+
+
+
+  
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap4/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap4/bootstrap.bundle.min.js"></script>
+
+    <script>
+        //navbar 
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 10) {
+        $('#navBar').addClass('floating-nav');
+    } else {
+        $('#navBar').removeClass('floating-nav');
+    }
+});
+
+// input 
+var all = document.getElementsByClassName('inp');
+for(var i=0;i<all.length;i++)
+all[i].onclick=function(){
+    this.parentElement.classList.add("filled");
+}
+
+// input file 
+$(".inp").change(function (e) {
+    var nomFile = e.target.value.split("\\").pop();
+
+    if (nomFile) {
+        $(this).parent().addClass("inp-file-d-filled");
+        $(this).siblings(".inp-label-file").html("Document ajouté");
+        $(this).siblings(".inp-icon-file-right").removeClass("fa-file-upload");
+        $(this).siblings(".inp-icon-file-right").addClass("fa-check-circle");
+        $(this).siblings(".inp-file-msg").css("display", "block");
+        $(this).siblings(".inp-file-msg").html("Nom du fichier ajouté: '" + nomFile + "'");
+        var check1 = $("#inp-file-cin").parent().hasClass("inp-file-d-filled");
+        var check2 = $("#inp-file-contract").parent().hasClass("inp-file-d-filled");
+        var check3 = $("#inp-file-releve").parent().hasClass("inp-file-d-filled");
+        var check4 = $("#inp-file-facture").parent().hasClass("inp-file-d-filled");
+        if (check1 && check2 && check3 && check4) {
+            $(".btn-pr").removeClass("btn-pr-disabled");
+            $(".btn-pr").removeAttr("disabled");
+        }
+    } else {
+        $(this).parent().removeClass("inp-file-d-filled");
+        $(this).siblings(".inp-label-file").html("Ajouter votre document");
+        $(this).siblings(".inp-icon-file-right").removeClass("fa-check-circle");
+        $(this).siblings(".inp-icon-file-right").addClass("fa-file-upload");
+        $(this).siblings(".inp-file-msg").css("display", "block");
+        $(this).siblings(".inp-file-msg").html("Aucun fichier selectionné");
+        $(".btn-pr").addClass("btn-pr-disabled");
+        $(".btn-pr").attr("disabled", "disabled");
+    }
+});
+
+
+//slider style
+if (document.getElementById("sliderCapital")){
+
+document.getElementById("sliderCapital").oninput = function () {
+    var slider = document.getElementById("sliderCapital");
+    var selector = document.getElementById("selector");
+    var selectValue = document.getElementById("selectValue");
+    var progressBar = document.getElementById("progressBar");
+  selectValue.innerHTML = slider.value + "Dt";
+  selector.style.left = (this.value - 5000) / 150 + "%";
+  selector.style.transform = "translateX(-" + (this.value - 5000) / 150 + "%)";
+  progressBar.style.width = (this.value - 5000) / 150 + "%";
+};
+
+}
+
+if(document.getElementById("sliderTime")){
+
+
+document.getElementById("sliderTime").oninput = function () {
+    var sliderT = document.getElementById("sliderTime");
+    var selectorT = document.getElementById("selectorTime");
+    var selectValueT = document.getElementById("selectValueTime");
+    var progressBarT = document.getElementById("progressBarTime");
+  selectValueT.innerHTML = sliderT.value + " mois";
+  selectorT.style.left = (this.value - 6) * 3.33333 + "%";
+  selectorT.style.transform = "translateX(-" + (this.value - 6) * 3.33333 + "%)";
+  progressBarT.style.width = (this.value - 6) * 3.33333 + "%";
+}
+}
+
+
+
+    </script>
+</body>
+
+</html>
+    </main>
+
+    <page-footer num-service-client="70 000 050" apple="" google="" facebook="https://www.facebook.com"
+        instagram="https://www.instagram.com" youtube="https://www.youtube.com" linkedin="https://www.linkedin.com">
+    </page-footer>
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap4/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap4/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/comps/navbaroffline.js"></script>
+    <script src="/js/comps/navbaronline.js"></script>
+    <script src="/js/comps/footer.js"></script>
+    <script src="/js/config.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nouveaux Dossiers</title>
+    <link rel="stylesheet" href="css/bootstrap4/css/bootstrap.min.css" />
+    <link href="fas/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="side-menu">
+        <div class="logo">
+          <img src="img/logo.svg" alt="" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <i class="fa fa-home menu-icon" aria-hidden="true"></i
+              ><a href="index.htm">Tableau de bord</a>
+            </li>
+            <li>
+              <i class="fa fa-file-alt menu-icon" aria-hidden="true"></i>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                >Demandes <i class="fa fa-caret-down dropdown-icon"></i
+              ></a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="demandes-nouveaux-dossiers.htm"
+                    >Nouveaux dossiers
+                  </a>
+                </li>
+                <li>
+                  <a href="demandes-dossiers-acceptes.htm"
+                    >Dossiers acceptés
+                  </a>
+                </li>
+                <li>
+                  <a href="demandes-dossiers-refuses.htm">Dossiers refusés </a>
+                </li>
+              </ul>
+            </li>
+            <li class="open-menu-page">
+              <i class="fa fa-file-import menu-icon" aria-hidden="true"></i
+              ><a
+                href="#pageSubMenu2"
+                data-toggle="collapse"
+                aria-expanded="true"
+                class="dropdown-toggle"
+                >Dossiers transferés (DCR)<i
+                  class="fa fa-caret-down dropdown-icon dropdown-flipped"
+                ></i
+              ></a>
+              <ul class="collapse list-unstyled show" id="pageSubMenu2">
+                <li>
+                  <a
+                    href="dcr-dossiers-enattentes.htm"
+                    class="active-dropdown-link"
+                    >Dossiers en atentes
+                  </a>
+                </li>
+                <li>
+                  <a href="dcr-dossiers-traites.htm">Dossiers traités </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="fa fa-calendar-alt menu-icon" aria-hidden="true"></i
+              ><a href="agenda.htm">Agenda</a>
+            </li>
+            <li>
+              <i class="fa fa-sign-out-alt menu-icon" aria-hidden="true"></i
+              ><a href="">Déconnexion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page">
+        <div class="top-nav">
+          <div class="container-fluid">
+            <p class="t-subtitle-1 pages-tree">
+              Dossiers transferés (DCR) /
+              <span class="pages-tree-active">Dossiers en atentes</span>
+            </p>
+            <a href="">CrédApp utilisateur</a>
+          </div>
+        </div>
+        <div class="main">
+          <div class="container-fluid">
+            <div class="paper">
+              <h5>Dossiers en atentes</h5>
+              <hr />
+              <table class="table-demandes">
+                <thead>
+                  <tr>
+                    <th>Nom du client</th>
+                    <th>Capital</th>
+                    <th>Durée</th>
+                    <th>Mensualité</th>
+                    <th>Détails</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hadeel Ben Mansour</td>
+                    <td>10 000Dt</td>
+                    <td>12 Mois</td>
+                    <td>352Dt</td>
+                    <td>
+                      <a href="#"
+                        >Voir plus<i class="fas fa-plus-circle"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hadeel Ben Mansour</td>
+                    <td>10 000Dt</td>
+                    <td>12 Mois</td>
+                    <td>352Dt</td>
+                    <td>
+                      <a href="#"
+                        >Voir plus<i class="fas fa-plus-circle"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hadeel Ben Mansour</td>
+                    <td>10 000Dt</td>
+                    <td>12 Mois</td>
+                    <td>352Dt</td>
+                    <td>
+                      <a href="#"
+                        >Voir plus<i class="fas fa-plus-circle"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hadeel Ben Mansour</td>
+                    <td>10 000Dt</td>
+                    <td>12 Mois</td>
+                    <td>352Dt</td>
+                    <td>
+                      <a href="#"
+                        >Voir plus<i class="fas fa-plus-circle"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hadeel Ben Mansour</td>
+                    <td>10 000Dt</td>
+                    <td>12 Mois</td>
+                    <td>352Dt</td>
+                    <td>
+                      <a href="#"
+                        >Voir plus<i class="fas fa-plus-circle"></i
+                      ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap4/js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script>
+      /// side-menu active drop down link
+      $(".dropdown-toggle").click(function () {
+        $(this).parent().toggleClass("active-menu-page");
+        $(this).find(".dropdown-icon").toggleClass("dropdown-icon-flipped");
+      });
+    </script>
+  </body>
+</html>

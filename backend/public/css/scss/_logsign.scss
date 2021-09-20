@@ -1,0 +1,178 @@
+#linsin {
+  margin-top: 0;
+  background: linear-gradient(rgba(0, 151, 95, 0.65), rgba(0, 151, 95, 0.65)),
+    url("../img/bg-login.png");
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100%;
+  .linsin-lan {
+    height: 100vh;
+
+    .linsin-lan-1 {
+      text-align: center;
+      color: #fff;
+      h4 {
+        margin-top: 24px;
+      }
+      p {
+        margin-top: 18px;
+      }
+      img {
+        margin: 0 auto 0 auto;
+        width: 60px;
+        height: auto;
+      }
+    }
+
+    .linsin-lan-2 {
+      .paper {
+        margin: 0 auto auto auto;
+        padding: 64px;
+        text-align: left;
+        width: 478px;
+        right: 0;
+        position: relative;
+
+        img,
+        h3 {
+          margin-bottom: 18px;
+        }
+
+        .inp-d {
+          margin-bottom: 28px;
+        }
+
+        a {
+          .t-subtitle-2:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .btn-pr {
+          margin-bottom: 28px;
+          width: 100%;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+//stepper
+
+.stepper {
+  display: table;
+  width: 80%;
+  margin: 0 auto;
+  background-color: inherit;
+
+  .step {
+    display: table-cell;
+    position: relative;
+    padding: 18px;
+
+    .step-circle {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      background-color: #999999;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .step-title {
+      margin-top: 16px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .step-title {
+      text-align: center;
+      color: $black3;
+    }
+  }
+
+  .step:first-child {
+    padding-left: 0px;
+  }
+
+  .step:last-child {
+    padding-right: 0;
+  }
+
+  .step:first-child .step-bar-left,
+  .step:last-child .step-bar-right {
+    display: none;
+  }
+
+  .step.active .step-circle {
+    background-color: $primary-color;
+  }
+
+  .step.done {
+    .step-circle:before {
+      font-family: "Font Awesome\ 5 Free";
+      font-weight: 900;
+      content: "\f00c";
+    }
+    .step-circle * {
+      display: none;
+    }
+  }
+  .step.active .step-title {
+    font-weight: 600;
+    color: $black1;
+  }
+  .step.active.done .step-title {
+    font-weight: 600;
+  }
+}
+
+.stepper .step .step-bar-left,
+.stepper .step .step-bar-right {
+  position: absolute;
+  top: 36px;
+  height: 1px;
+  border-top: 1px solid #dddddd;
+}
+.stepper .step .step-bar-right {
+  right: 0;
+  left: 50%;
+  margin-left: 20px;
+}
+.stepper .step .step-bar-left {
+  left: 0;
+  right: 50%;
+  margin-right: 20px;
+}
+
+
+@media (max-width: 576px) {
+  #linsin{
+    background: transparent;
+    .linsin-lan-2{
+      margin-top: 16px !important;
+      .paper{
+        background-color: transparent;
+        box-shadow: none;
+        padding: 16px !important;
+        width: 100% !important;
+      }
+    }
+  }
+  
+}
+
+.etape{
+  display: none;
+  &:first-child {
+    display: block;
+  }
+}

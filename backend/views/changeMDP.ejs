@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Votre Profile</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <form action="" method="POST">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="profileAdmin">CréditUBCI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="profileAdmin"></span>Espace Commercial</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/nouveauxDossiers"></span>Nouveaux dossiers</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/dossiersAcceptes"></span>Dossiers acceptés</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/dossiersRefuses"></span>Dossiers refusés</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/configAdmin/mdp"></span>Configuration</a>
+        </li>
+      </ul>
+      <a href="/logout" class="btn btn-danger">Déconnection</a>
+  
+  </nav>
+  <div class="container">
+    <h5>Changer votre mot de passe</h5><br>
+    <ul>
+      <li>
+        <label for='mdp1'>Votre ancien mot de passe</label><br/>
+        <input type='password' name='mot_de_passe' id='mot_de_passe'/>
+      </li><br/>
+      <li>
+        <label for='mdp2'>Votre nouveau mot de passe</label><br/>
+        <input type='password' name='mot_de_passe1' id='mot_de_passe1'/>
+      </li><br/>
+      <li>
+        <label for='mdp2v'>Confirmez votre nouveau mot de passe</label><br/>
+        <input type='password' name='mot_de_passe2' id='mot_de_passe2'/>
+      </li><br/>
+      <input type="submit" class="btn btn-success" value="Valider">
+     
+    </ul>
+    </div>
+    </form>
+  </body>
+  </html>

@@ -1,0 +1,377 @@
+// forms
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+
+
+
+.inp-d {
+  position: relative;
+  margin-bottom: 32px;
+  .inp {
+    width: 100%;
+    max-width: 350px;
+    height: 46px;
+    border: 1px solid $black3;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-left: 36px;
+    color: $black1;
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid $primary-color;
+    }
+  }
+
+  .inp:active ~ .inp-label,
+  .inp:focus ~ .inp-label {
+    color: $primary-color;
+    font-weight: 400;
+    left: 8px;
+    top: -9px;
+    font-size: 12px;
+    padding: 1px;
+    background-color: #fff;
+  }
+
+  .inp-label {
+    position: absolute;
+    left: 36px;
+    top: 11px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: $black2;
+    transition: linear 0.1s;
+    pointer-events: none;
+  }
+
+  .inp-aside {
+    position: absolute;
+    right: 22px;
+    top: 11px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: $black3;
+    pointer-events: none;
+    display: none;
+  }
+
+  .inp-icon {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    font-size: 18px;
+    color: $black3;
+  }
+
+  .inp-message {
+    margin-left: 8px;
+    font-weight: 300;
+  }
+  
+}
+
+.focused {
+  .inp {
+    border: 2px solid $primary-color;
+  }
+
+  .inp-label {
+    color: $primary-color;
+    font-weight: 400;
+    left: 8px;
+    top: -9px;
+    font-size: 12px;
+    padding: 1px;
+    background-color: #fff;
+  }
+  .inp-aside {
+    color: $black1;
+    display: block;
+  }
+}
+
+.filled {
+  .inp {
+    color: $black1;
+    border: 1px solid $black1;
+  }
+  .inp-label {
+    color: $black1;
+    font-weight: 400;
+    left: 8px;
+    top: -9px;
+    font-size: 12px;
+    padding: 1px;
+    background-color: #fff;
+  }
+  .inp-aside {
+    color: $black1;
+    display: block;
+  }
+}
+
+.error {
+  .inp {
+    border: 1px solid red;
+    &:hover {
+      border: 1px solid red;
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid red;
+    }
+  }
+  .inp:focus ~ .inp-label,
+  .inp:active ~ .inp-label {
+    color: red;
+  }
+  .inp-label {
+    color: red;
+  }
+  .inp-message {
+    color: red;
+  }
+}
+
+#inp-file-d {
+  margin-bottom: 14px;
+  .inp {
+    display: none;
+  }
+  label.inp-label-file-name {
+    position: relative;
+    display: block;
+  }
+
+  .inp-icon {
+    top: 46px;
+  }
+
+  .inp-icon-file-right {
+    left: 324px;
+  }
+
+  label.inp-label-file {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: $black2;
+    transition: linear 0.1s;
+    border: 1px solid $black3;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 350px;
+    height: 46px;
+    padding-left: 38px;
+    padding-top: 10px;
+    position: relative;
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid $primary-color;
+    }
+  }
+  .inp-file-msg {
+    color: $black2;
+    margin-bottom: 14px;
+    display: none;
+  }
+}
+
+div#inp-file-d.inp-file-d-filled {
+  label.inp-label-file {
+    color: $black1;
+    border: 1px solid $black1;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 12px;
+  }
+  .inp-icon-file-right {
+    color: $primary-color-light;
+  }
+  .inp-file-msg {
+    display: block;
+  }
+}
+
+// buttons
+
+//buttons : text
+
+@mixin t-button {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+}
+
+//buttons : form
+
+@mixin btn {
+  padding: 8px 24px 8px 24px;
+  border-radius: 4px;
+  margin: 0 auto 0 auto;
+  text-decoration: none;
+}
+
+//buttons : primary
+
+@mixin btn-pr {
+  @include btn;
+  @include t-button;
+  background: linear-gradient(#2db381, #007d5c);
+  color: #fff;
+  border: none;
+}
+
+.btn-pr {
+  @include btn-pr;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-pr:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(#2db381, #007d5c);
+    color: #fff;
+    text-decoration: none;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.btn-pr:active {
+  background: linear-gradient(#2db381, #007d5c);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+//buttons : secondairy
+
+@mixin btn-sec {
+  @include btn;
+  @include t-button;
+  background-color: inherit;
+  color: $primary-color;
+  border: none;
+}
+
+.btn-sec {
+  @include btn-sec;
+}
+
+.btn-sec:hover {
+  background-color: rgba(45, 179, 129, 0.1);
+  text-decoration: none;
+}
+
+.btn-sec:active {
+  background-color: rgba(45, 179, 129, 0.2);
+}
+
+//buttons : outlined
+
+@mixin btn-out {
+  @include btn;
+  @include t-button;
+  background-color: inherit;
+  color: $black2;
+  border: 1px solid $black3;
+}
+
+.btn-out {
+  @include btn-out;
+}
+
+.btn-out:hover {
+  background-color:$primary-color-op002;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.btn-out:active {
+  background-color: rgba(45, 179, 129, 0.2);
+  border: 1px solid $primary-color;
+}
+
+@mixin btn-disabled {
+  background: linear-gradient(#dfdfdf, #dfdfdf);
+  box-shadow: inset 0 0 1px #d4d4d4;
+  color: $black3;
+  cursor: not-allowed;
+}
+
+.btn-pr:disabled {
+  @include btn-disabled;
+}
+
+// radio
+.sim-radio {
+  display: none;
+}
+.sim-radio-label {
+  text-align: center;
+  width: 78px;
+  height: 72px;
+  border: 1px solid $black3;
+  border-radius: 4px;
+  background-color: inherit;
+
+  background-color: #fff;
+  h6 {
+    padding-top: 15px;
+  }
+}
+
+.sim-radio:checked + .sim-radio-label {
+  border: 1.5px solid $primary-color;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px rgba(45, 179, 129, 0.2),
+    -5px -5px 5px 0px rgba(45, 179, 129, 0.2);
+}
+
+#submit-btn {
+  position: relative;
+}
+
+#submit-btn:disabled:hover:after {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  width: 100%;
+  content: attr(title);
+  background-color: #ffa;
+  color: #000;
+  line-height: 1.4em;
+  border: 1px solid #000;
+}
+
+.btn-pr.btn-pr-disabled {
+  @include btn-disabled;
+}
+
+
+@media (max-width: 576px){
+  .inp-d{
+    .inp{
+      max-width: 100%;
+    }
+  }
+}

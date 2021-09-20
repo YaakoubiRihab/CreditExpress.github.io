@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Votre Profile</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">CréditUBCI</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/simulation/client">Simulation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/client"></span>Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/config"></span>Configuration</a>
+      </li>
+    </ul>
+    <a href="/logout" class="btn btn-danger">Déconnection</a>
+
+</nav><br><br>
+      <div class="container">
+        <h4 class="text-center mb-5 text-uppercase text-muted">passer une demande</h4>
+        <div class="row">
+            <div class="col-sm-5 bg-light border rounded py-3">
+                
+                <form action="" method="POST" id ="demande" >
+
+                    <div class="form-group">
+                      <label for="rang">Rang</label>
+                      <input type="text" name="user_rang" id="user_rang" class="form-control" placeholder="Rang" required>
+                    </div>     
+                    <div class="form-group">
+                        <label for="capital">Le capital</label>
+                        <input type="text" name="demande_capital" id="capital" class="form-control" placeholder="Capital" required>
+                    </div> 
+
+                     <div class="form-group">
+                        <label for="durée">Durée de crédit</label>
+                        <select class="custom-select mr-sm-2" name="durée_crédit">
+                            <option>6 Mois</option>
+                            <option>12 Mois</option>
+                            <option>24 Mois</option>
+                        </select>
+                    </div>   
+                    <div class="form-group">
+                      <label for="mensualité">La Mensualité</label>
+                      <input type="text" name="mensualité" id="mensualité" class="form-control" placeholder="Mensualité" required>
+                  </div> 
+                  <div class="form-group">
+                    <label for="révenue">Autres révenues</label>
+                    <input type="text" name="révenue" id="révenue" class="form-control" placeholder="révenue" required>
+                </div> 
+                <div class="form-group">
+                  <label for="id_national">Carte d'identité national</label>
+                  <input type="file" name="id_national" id="id_national" class="form-control" required>
+              </div> 
+                <div class="form-group">
+                  <label for="fact_steg_sonede">La facture d'eau (SONEDE) ou de l'électricité (STEG)</label>
+                  <input type="file" name="fact_steg_sonede" id="fact_steg_sonede" class="form-control" required>
+              </div> 
+          <div class="form-group">
+              <label for="contrat_travail">Le contrat de travail</label>
+              <input type="file" name="contrat_travail" id="contrat_travail" class="form-control" required>
+          </div> 
+          <div class="form-group">
+              <label for="revenu_sal">Le revenu salarial</label>
+              <input type="file" name="revenu_sal" id="revenu_sal" class="form-control" required>
+          </div> 
+
+
+                <button type="submit" class="btn btn-primary" id="send-button">Envoyer</button>
+
+</form>
+</body>
+</html>      

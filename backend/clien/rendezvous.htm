@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrédApp</title>
+    <link rel="stylesheet" href="css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="fas/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body class="p-pro ">
+    <navbar-on page="Profil" alerts-number="0" nom-utilisateur="Foulen">
+    </navbar-on>
+
+<main class="pro-p-agenda">
+<div class="container">
+    <div class="row">
+        <!-- Information utilisateur -->
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="paper pro-user">
+                <h4>Prénom et Nom</h4>
+                <ul class="fa-ul">
+                <li>
+                    <span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>ville
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-map"></i></span>adresse
+                    agence de liaison
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-calendar-plus"></i></span>Date de creation de compte
+                </li>
+                </ul>
+            </div>
+        </div>
+        <!-- nombre RDV -->
+        <div class="d-none d-md-block col-md-4 col-lg-3">
+          <div class="paper pro-ntf" id="paper-bg-green">
+            <div class="nb-demandes text-center">
+              <p class="t-body-2">Vous avez envoyez</p>
+              <h3>2</h3>
+              <p>Demandes</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Menu -->
+        <div class="col-12 col-md-4">
+            <div class="paper pro-mnu" id="paper-bg-green">
+              <ul>
+                <li>
+                  <a href="profil.htm" >
+                    <h6>
+                      Mes demandes
+                    </h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="rendezvous.htm" class="active">
+                    <h6>
+                      Mes rendez-vous
+                    </h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="parametres.htm">
+                    <h6>
+                      Paramètres du compte
+                    </h6>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <!-- Partie demande -->
+        <div class="col-12 col-md-8">
+            <div class="paper pro-main">
+              <h5>Rendez-vous</h5>
+              <hr />
+              <div class="row">
+                <div class="col-4">
+                    <div class="date-rdv">
+                        <h2>30</h2>
+                        <h5>Juillet</h5>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="rest-rdv">
+                        <p>20 Avenue Habib Bourguiba, Tunis <span class="rdv-time">14h00</span></p>
+                        <hr>
+                        <h6>Détails du demande:</h6>
+                        <div class="detail-demande">
+                            <dl class="resume-sim-list">
+                                <dt>Capital: </dt>
+                                <dd>12 000 Dt</dd>
+                                <dt>Mensualité: </dt>
+                                <dd>434 Dt</dd>
+                                <dt>Durée: </dt>
+                                <dd>32 mois</dd>
+                                <dt>Taux d'intérêt: </dt>
+                                <dd>12%</dd>
+                                <dt>Cout de crédit: </dt>
+                                <dd>1440 Dt</dd>
+                            </dl>
+                        </div>
+                        <h6>Documents a présenter:</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet mi
+                            dolor. Etiam dignissim mattis ex, sed euismod metus vehicula sed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+          </div>
+
+    </div>
+
+</div>
+</main>
+
+
+
+<page-footer num-service-client="70 000 050" apple="" google="" facebook="https://www.facebook.com"
+instagram="https://www.instagram.com" youtube="https://www.youtube.com" linkedin="https://www.linkedin.com">
+</page-footer>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap4/bootstrap.bundle.js"></script>
+<script src="js/bootstrap4/bootstrap.bundle.min.js"></script>
+
+<script src="js/comps/navbaroffline.js"></script>
+<script src="js/comps/navbaronline.js"></script>
+<script src="js/comps/tableDemandes.js"></script>
+<script src="js/comps/inputs.js"></script>
+<script src="js/comps/footer.js"></script>
+
+<script src="js/config.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrédApp</title>
+    <link rel="stylesheet" href="/css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="/fas/css/all.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+
+<body id="linsin">
+
+
+    <main >
+        <div class="container">
+            <div class="row linsin-lan">
+              <div class="my-auto linsin-lan-1 d-none d-lg-block col-lg-6">
+                <img src="/img/users.svg" alt="" />
+                <h4>Connecter ou créer un compte</h4>
+                <p>Envoyez et consulter vos demandes de crédits</p>
+                <p>Consulter vos alertes</p>
+                <p>Restez en contact avec nous</p>
+              </div>
+      
+              <div class="my-auto linsin-lan-2 col-lg-6  col-12" id="inscription">
+                <div class="paper">
+                  <img src="/img/logo.svg" alt="" />
+                  <h3>Inscription</h3>
+      
+                  <div class="stepper">
+                    <div class="step active" id="stepper-1">
+                      <div class="step-circle"><span>1</span></div>
+                      <div class="step-title">
+                        Information <br />
+                        personnel
+                      </div>
+                      <div class="step-bar-left"></div>
+                      <div class="step-bar-right"></div>
+                    </div>
+                    <div class="step" id="stepper-2">
+                      <div class="step-circle"><span>2</span></div>
+                      <div class="step-title">Contact</div>
+                      <div class="step-bar-left"></div>
+                      <div class="step-bar-right"></div>
+                    </div>
+                    <div class="step" id="stepper-3">
+                      <div class="step-circle"><span>3</span></div>
+                      <div class="step-title">
+                        Compte <br />
+                        UBCI
+                      </div>
+                      <div class="step-bar-left"></div>
+                      <div class="step-bar-right"></div>
+                    </div>
+                    <div class="step" id="stepper-4">
+                      <div class="step-circle"><span>4</span></div>
+                      <div class="step-title">
+                        Compte <br />
+                        CrédApp
+                      </div>
+                      <div class="step-bar-left"></div>
+                      <div class="step-bar-right"></div>
+                    </div>
+                  </div>
+      
+                  <form action="enregistrement" id="sign-form" method="POST">
+                    <!-- premiere etape inscription -->
+                    <div id="stepOne" class="etape">
+                        <input-text type="text" name="user_name" error="" label="Nom*" msg="" icon="fa-user-alt" required="required"></input-text>
+                        <input-text type="text" name="user_prenom" error="" label="Prénom*" msg="" icon="fa-user-alt" required="required"></input-text>
+                      <div class="form-row">
+                        <div class="inp-d col-md-7 filled">
+                          <input type="date" class="inp" name="user_daten" required/>
+                          <label for="" class="inp-label">Date de naissance*</label>
+                          <i class="fa fa-birthday-cake inp-icon" aria-hidden="true" ></i>
+                        </div>
+                        <div class="inp-d col-md-5">
+                          <input type="text" class="inp" required name="user_lieu"/>
+                          <label for="" class="inp-label">Lieu*</label>
+                          <i class="fa fa-map-marker-alt inp-icon" aria-hidden="true" ></i>
+                        </div>
+                      </div>
+                      <input type="button" value="suivant" class="btn-pr next-btn-1" />
+                    </div>
+      
+                    <!-- 2eme etape inscription -->
+                    <div id="stepTwo" class="etape">
+                        <input-text type="text" name="user_adresse" error="" label="Adresse*" msg="" icon="fa-map-marked-alt" required="required"></input-text>
+                      <div class="form-row">
+                        <div class="inp-d col-md-6">
+                          <input type="text" class="inp" name="user_ville" required/>
+                          <label for="" class="inp-label">Ville*</label>
+                          <i
+                            class="fa fa-map-marker-alt inp-icon"
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                        <div class="inp-d col-md-6">
+                          <input type="number" class="inp" name="user_code" required/>
+                          <label for="" class="inp-label">Code postal*</label>
+                          <i class="fa fa-circle inp-icon" aria-hidden="true"></i>
+                        </div>
+                      </div>
+      
+                      <div class="inp-d">
+                        <input type="number" class="inp" name="user_mobile" required/>
+                        <label for="" class="inp-label">Tel mobile*</label>
+                        <i class="fa fa-mobile-alt inp-icon" aria-hidden="true"></i>
+                      </div>
+      
+                      <div class="inp-d">
+                        <input type="number" class="inp" name="user_domicile"/>
+                        <label for="" class="inp-label">Tel domécil</label>
+                        <i class="fa fa-phone-alt inp-icon" aria-hidden="true"></i>
+                      </div>
+                      <input type="button" value="suivant" class="btn-pr next-btn-2" />
+                    </div>
+      
+                    <!-- 3eme etape inscription -->
+                    <div id="stepThree" class="etape">
+                      <div class="inp-d">
+                        <input type="number" class="inp" name="user_num" required />
+                        <label for="" class="inp-label"
+                          >Numéro du compte bancaire*</label
+                        >
+                        <i class="fa fa-credit-card inp-icon" aria-hidden="true"></i>
+                      </div>
+      
+                      <div class="inp-d">
+                        <input type="number" class="inp" name="user_salaire" required />
+                        <label for="" class="inp-label">Salaire*</label>
+                        <i
+                          class="fa fa-money-bill-wave-alt inp-icon"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                      <input type="button" value="suivant" class="btn-pr next-btn-3" />
+                    </div>
+      
+                    <!-- 4eme etape inscription -->
+                    
+
+                    <div id="stepFour" class="etape">
+                      <div class="inp-d">
+                        <input type="number" class="inp" name="user_cin" required />
+                        <label for="" class="inp-label"
+                          >CIN*</label
+                        >
+                        <i class="fa fa-credit-card inp-icon" aria-hidden="true"></i>
+                      </div>
+                      <div class="inp-d">
+                        <input type="email" class="inp" name="user_email" required />
+                        <label for="" class="inp-label">Email*</label>
+                        <i class="fa fa-envelope inp-icon" aria-hidden="true"></i>
+                      </div>
+                      <div class="inp-d">
+                        <input type="password" class="inp" name="user_passe"/>
+                        <label for="" class="inp-label">Mot de passe*</label>
+                        <i class="fa fa-lock inp-icon" aria-hidden="true"></i>
+                      </div>
+                      <input type="submit" value="Validez" class="btn-pr" />
+                    </div>
+      
+                    
+                  </form>
+                  <p>Vous avez déja un compte?</p>
+                  <a href="/login">Connexion</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+    </main>
+
+
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="/js/jqueryValidate.js"></script>
+<script src="/js/bootstrap4/bootstrap.bundle.js"></script>
+<script src="/js/bootstrap4/bootstrap.bundle.min.js"></script>
+
+<script src="/js/comps/navbaroffline.js"></script>
+<script src="/js/comps/navbaronline.js"></script>
+<script src="/js/comps/inputs.js"></script>
+<script src="/js/comps/simulation.js"></script>
+<script src="/js/comps/footer.js"></script>
+
+<script src="/js/config.js"></script>
+<script src="/js/signInValidation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CredApp - Tableau de bord</title>
+    <link rel="stylesheet" href="/css/bootstrap4/css/bootstrap.min.css" />
+    <link href="/fas/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/com.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="side-menu">
+        <div class="logo">
+          <img src="/img/logo.svg" alt="" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="open-menu-page">
+              <i class="fa fa-home menu-icon" aria-hidden="true"></i
+              ><a href="/profileAdmin">Tableau de bord</a>
+            </li>
+            <li>
+              <i class="fa fa-file-alt menu-icon" aria-hidden="true"></i>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                >Demandes <i class="fa fa-caret-down dropdown-icon"></i
+              ></a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="/nouveauxDossiers"
+                    >Nouveaux dossiers
+                  </a>
+                </li>
+                <li>
+                  <a href="/dossiersAcceptes"
+                    >Dossiers acceptés
+                  </a>
+                </li>
+                <li>
+                  <a href="/dossiersRefuses">Dossiers refusés </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="fa fa-file-import menu-icon" aria-hidden="true"></i
+              ><a
+                href="#pageSubMenu2"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                >Dossiers transferés (DCR)<i
+                  class="fa fa-caret-down dropdown-icon"
+                ></i
+              ></a>
+              <ul class="collapse list-unstyled" id="pageSubMenu2">
+
+                <li>
+                  <a href="/dossiersTraites">Dossiers traités </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <i class="fa fa-sign-out-alt menu-icon" aria-hidden="true"></i
+              ><a href="/logout">Déconnexion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page">
+        <div class="top-nav">
+          <div class="container-fluid">
+            <p class="t-subtitle-1 pages-tree pages-tree-active">
+              Tableau de bord
+            </p>
+            <a href="#">CrédApp Commercial</a>
+          </div>
+        </div>
+        <div class="main">
+          <div class="container-fluid">
+            <div class="row update-row">
+             <div class="col-3 update-card">
+                <div class="paper">
+                  <div class="update">
+                    <a href="/nouveauxDossiers" >Nouveax dossiers</a>
+                    <h2></h2>
+                  </div>
+                  <div class="icon">
+                    <i
+                      class="fa fa-file-alt"
+                      id="menu-icon-1"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 update-card">
+                <div class="paper">
+                  <div class="update">
+                    <a href="/rdvConfirme" >Rendez-vous confirmés</a>
+                    <h2></h2>
+                  </div>
+                  <div class="icon">
+                    <i
+                      class="fa fa-file-alt"
+                      id="menu-icon-2"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 update-card">
+                <div class="paper">
+                  <div class="update">
+                    <a href="/rdvAujourdhuit" >Rendez-vous Aujourd'huit</a>
+                  </div>
+                  <div class="icon">
+                    <i
+                      class="fa fa-file-alt"
+                      id="menu-icon-3"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row main-row">
+              <div class="main-files-col col-8">
+                <div class="paper">
+                  <h5>Rendez-vous Aujourd'huit</h5>
+                  <hr />
+                  <table class="table-demandes">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID Crédit</th>
+                        <th scope="col">ID </th>
+                        <th scope="col">N°Rang</th>
+                        <th scope="col">Capital</th>
+                        <th scope="col">Le durée de crédit</th>
+                        <th scope="col">La monsualité</th>
+                        <th scope="col">Autre révenue</th>
+                        <th scope="col">Etat de dossier</th>
+
+                        <th></th>
+            
+            
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <% items.forEach(function(item,index){ %>
+                      <tr>
+                        <td><%= item.idCrédit %></td>
+                        <td><%= item.id %></td>
+                        <td><%= item.rangCr %></td>
+                        <td><%= item.capital %></td>
+                        <td><%= item.duréeCr %></td>
+                        <td><%= item.monsualité %></td>
+                        <td><%= item.Autres_rév %></td>
+                        <td><%= item.etat_dossier %></td>
+
+
+            
+                      </tr>
+            
+                      <% }); %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            <!--  <div class="stats-col col-4">
+                <div class="paper">
+                  <h5>Statistiques</h5>
+                  <hr />
+                  <div class="divTable stats-table">
+                    <div class="divTableBody">
+                      <div class="divTableRow">
+                        <div class="divTableCell tc1">Tous les dossiers</div>
+                        <div class="divTableCell tc2">cell2_1</div>
+                      </div>
+                      <hr class="stats-table-spacer" />
+                      <div class="divTableRow">
+                        <div class="divTableCell tc1">Nouveaux dossiers</div>
+                        <div class="divTableCell tc2">cell2_2</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell tc1">Dossiers acceptés</div>
+                        <div class="divTableCell tc2">cell2_3</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell tc1">Dossiers refusés</div>
+                        <div class="divTableCell tc2">cell2_4</div>
+                      </div>
+                      <hr class="stats-table-spacer" />
+                      <div class="divTableRow">
+                        <div class="divTableCell tc1">
+                          Dossiers en atentes
+                        </div>
+                        <div class="divTableCell tc2">cell2_5</div>
+                      </div>
+                      <div class="divTableRow">
+                        <div class="divTableCell tc1">Dossiers traités</div>
+                        <div class="divTableCell tc2">cell2_6</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap4/js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script>
+      /// side-menu active drop down link
+
+      $(".dropdown-toggle").click(function () {
+        $(this).parent().toggleClass("active-menu-page");
+        $(this).find(".dropdown-icon").toggleClass("dropdown-icon-flipped");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CredApp - Tableau de bord</title>
+    <link rel="stylesheet" href="/css/bootstrap4/css/bootstrap.min.css" />
+    <link href="/fas/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/com.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="side-menu">
+        <div class="logo">
+          <img src="/img/logo.svg" alt="" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="open-menu-page">
+              <i class="fa fa-home menu-icon" aria-hidden="true"></i
+              ><a href="/profileAdmin">Tableau de bord</a>
+            </li>
+            <li>
+              <i class="fa fa-file-alt menu-icon" aria-hidden="true"></i>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                >Demandes <i class="fa fa-caret-down dropdown-icon"></i
+              ></a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="/nouveauxDossiers"
+                    >Nouveaux dossiers
+                  </a>
+                </li>
+                <li>
+                  <a href="/dossiersAcceptes"
+                    >Dossiers acceptés
+                  </a>
+                </li>
+                <li>
+                  <a href="/dossiersRefuses">Dossiers refusés </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="fa fa-file-import menu-icon" aria-hidden="true"></i
+              ><a
+                href="#pageSubMenu2"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                >Dossiers transferés (DCR)<i
+                  class="fa fa-caret-down dropdown-icon"
+                ></i
+              ></a>
+              <ul class="collapse list-unstyled" id="pageSubMenu2">
+
+                <li>
+                  <a href="/dossiersTraites">Dossiers traités </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <i class="fa fa-sign-out-alt menu-icon" aria-hidden="true"></i
+              ><a href="/logout">Déconnexion</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+            <div class="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="paper">
+                                <h5>Résumé du demande</h5>
+                                <hr />
+                                <div class="resume-demande-col">
+                                    <p class="t-body-2">
+                                        Catégorie
+                                    </p>
+                                    <p>Express CT</p>
+                                </div>
+                                <div class="resume-demande-col">
+                                    <p class="t-body-2">
+                                        Capital
+                                    </p>
+                                    <p><%= capital %></p>
+                                </div>
+                                <div class="resume-demande-col">
+                                    <p class="t-body-2">
+                                        Mensualité
+                                    </p>
+                                    <p><%= mensualité %></p>
+                                </div>
+                                <div class="resume-demande-col">
+                                    <p class="t-body-2">
+                                      Durée
+                                    </p>
+                                    <p><%= durée %></p>
+                                </div>
+                            </div>
+                            <div class="paper">
+                                <div class="info-client">
+                                    <h5>Client</h5>
+                                    <hr />
+                                    <dl>
+                                        <dt><i class="fas fa-user-alt"></i> Nom :</dt>
+                                        <dd><%= nom %></dd>
+                                        <dt><i class="fas fa-user-alt"></i> Prénom :</dt>
+                                        <dd><%= prenom %></dd>
+                                        <dt>
+                                            <i class="fas fa-birthday-cake"></i> Date de naissance :
+                                        </dt>
+                                        <dd><%= dateNess %></dd>
+                                        <dt>
+                                            <i class="fas fa-map-marker-alt"></i> Lieu de naissance
+                                            :
+                                        </dt>
+                                        <dd><%= lieuNess %></dd>
+                                        <div class="break-line-info-client"></div>
+                                        <dt><i class="fas fa-id-card"></i> Num CIN :</dt>
+                                        <dd><%= cin %></dd>
+                                        <dt><i class="fas fa-map-marked-alt"></i> Adresse :</dt>
+                                        <dd><%= adresse %></dd>
+                                        <div class="break-line-info-client"></div>
+                                        <dt><i class="fas fa-envelope"></i> Email :</dt>
+                                        <dd><%= email %></dd>
+                                        <dt><i class="fas fa-mobile-alt"></i> Tel mobile :</dt>
+                                        <dd><%= tel_mobile %></dd>
+                                        <dt><i class="fas fa-phone-alt"></i> Tel domecile :</dt>
+                                        <dd><%= tel_domicile %></dd>
+                                        <div class="break-line-info-client"></div>
+                                        <dt><i class="fas fa-credit-card"></i> Salaire :</dt>
+                                        <dd><%= salaire %></dd>
+                                    </dl>
+                                </div>
+                                <div class="documents-client">
+                                    <h5>Document</h5>
+                                    <hr />
+                                    <div class="doc-links-div">
+                                        <div class="doc-link">
+                                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i>Facture steg <%= facture %></a>
+                                        </div>
+                                        <div class="doc-link">
+                                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i>Revenue <%= revenu_sal %></a>
+                                        </div>
+                                        <div class="doc-link">
+                                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i>Contrat de travail <%= contrat_travail %></a>
+                                        </div>
+                                        <div class="doc-link">
+                                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i>Facture steg</a>
+                                        </div>
+                                        <div class="doc-link">
+                                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i>Facture steg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="paper">
+                                <div class="verif-div">
+                                    <h5>Vérification</h5>
+                                    <hr />
+
+                                    <div class="verif-radio">
+                                        <dl>
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Client de la banque
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-1"
+                                                    name="verif-q-1" />
+                                                <label for="yes-radio-btn-1" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-1"
+                                                    name="verif-q-1" />
+                                                <label for="no-radio-btn-1" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Documents
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-2"
+                                                    name="verif-q-2" />
+                                                <label for="yes-radio-btn-2" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-2"
+                                                    name="verif-q-2" />
+                                                <label for="no-radio-btn-2" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Cotation saine
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-3"
+                                                    name="verif-q-3" />
+                                                <label for="yes-radio-btn-3" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-3"
+                                                    name="verif-q-3" />
+                                                <label for="no-radio-btn-3" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Salaire domicilié
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-4"
+                                                    name="verif-q-4" />
+                                                <label for="yes-radio-btn-4" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-4"
+                                                    name="verif-q-4" />
+                                                <label for="no-radio-btn-4" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Non interdit chequier
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-5"
+                                                    name="verif-q-5" />
+                                                <label for="yes-radio-btn-5" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-5"
+                                                    name="verif-q-5" />
+                                                <label for="no-radio-btn-5" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Résultat risque
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-6"
+                                                    name="verif-q-6" />
+                                                <label for="yes-radio-btn-6" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-6"
+                                                    name="verif-q-6" />
+                                                <label for="no-radio-btn-6" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+                                            <dt>
+                                                <label class="verif-prop">
+                                                    <p>
+                                                        Validation simulation
+                                                    </p>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <input type="radio" class="verif-radio-btn" id="yes-radio-btn-7"
+                                                    name="verif-q-7" />
+                                                <label for="yes-radio-btn-7" class="verif-radio-gen verif-radio-yes"><i
+                                                        class="fas fa-check-circle"></i></label>
+                                                <input type="radio" class="verif-radio-btn" id="no-radio-btn-7"
+                                                    name="verif-q-7" />
+                                                <label for="no-radio-btn-7" class="verif-radio-gen verif-radio-no"><i
+                                                        class="fas fa-times-circle"></i></label>
+                                            </dd>
+
+
+
+                                        </dl>
+                                    </div>
+
+
+
+
+
+                                </div>
+                                <div class="decis-div">
+                                    <h5>Résultat</h5>
+                                    <hr />
+                                    
+                                        
+                                        <a href="/verifAccepteCommercial?idCrédit=<%= id %>" class="btn btn-primary">Accepté</a> 
+                                        <a href="/verifTranfereCommercial?idCrédit=<%= id %>" class="btn btn-primary">Transférer</a> 
+                                        <a href="/verifRefuseCommercial?idCrédit=<%= id %>" class="btn btn-primary">Refusé</a> 
+                      
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap4/js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /// side-menu active drop down link
+        $(".dropdown-toggle").click(function () {
+            $(this).parent().toggleClass("active-menu-page");
+            $(this).find(".dropdown-icon").toggleClass("dropdown-icon-flipped");
+        });
+    </script>
+</body>
+
+</html>

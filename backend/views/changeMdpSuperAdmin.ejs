@@ -1,0 +1,69 @@
+<html>
+    <head>
+      <style>
+        body {
+                font-family: 'Montserrat', sans-serif;
+                background-color: #eee;
+              }
+  
+  .current {
+    background-color: #f44336;
+    border-radius: 7px;
+    box-shadow: 2px 5px 10px #111;
+    transition: all .3s;
+  }
+  
+  .current:hover {
+    background-color: #f66436;
+    border-radius: 7px;
+    box-shadow: 2px 5px 20px #111;
+  }
+  
+          </style>
+        <title>Configuration Admin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/admin/config">CréditUBCI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href=""></span>Espace Super Admin</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/configAdmin/mdp/superAdmin"></span>Configuration</a>
+            </li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/logout" class="btn btn-success"> Déconnxion</a></li>
+            </ul>
+      
+      </nav>
+      <div class="container">
+        <h5>Changer votre mot de passe</h5><br>
+        <ul>
+          <li>
+            <label for='mdp1'>Votre ancien mot de passe</label><br/>
+            <input type='password' name='mot_de_passe' id='mot_de_passe'/>
+          </li><br/>
+          <li>
+            <label for='mdp2'>Votre nouveau mot de passe</label><br/>
+            <input type='password' name='mot_de_passe1' id='mot_de_passe1'/>
+          </li><br/>
+          <li>
+            <label for='mdp2v'>Confirmez votre nouveau mot de passe</label><br/>
+            <input type='password' name='mot_de_passe2' id='mot_de_passe2'/>
+          </li><br/>
+          <input type="submit" class="btn btn-success" value="Valider">
+         
+        </ul>
+        </div>
+ 
+      </body>
+      </html>

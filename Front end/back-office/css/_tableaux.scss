@@ -1,0 +1,157 @@
+// tableau des demandes
+table.table-demandes {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.table-demandes td:first-child,
+table.table-demandes th:first-child {
+  text-align: left;
+}
+table.table-demandes td:last-child,
+table.table-demandes th:last-child {
+  text-align: right;
+}
+.table-rdv table.table-demandes th:last-child {
+  padding-right: 0;
+}
+table.table-demandes th:last-child {
+  padding-right: 38px;
+}
+table.table-demandes td,
+table.table-demandes th {
+  padding: 12px 8px;
+}
+table.table-demandes tr {
+  border-top: 1px solid #f5f5f5;
+}
+table.table-demandes thead tr {
+  border-top: none;
+}
+table.table-demandes tbody td {
+  font-size: 14px;
+}
+
+table.table-demandes thead th {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+table.table-demandes tfoot td {
+  font-size: 14px;
+}
+table.table-demandes tfoot .links {
+  text-align: right;
+}
+table.table-demandes tfoot .links a {
+  display: inline-block;
+  background: #1c6ea4;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+table.table-demandes tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+table.table-demandes tbody a {
+  padding: 8px 10px;
+  color: $primary-green;
+  text-decoration: none;
+  border-radius: 4px;
+
+  i {
+    margin-left: 8px;
+    color: $primary-green;
+  }
+}
+
+table.table-demandes tbody a:hover {
+  background-color: rgba(0, 151, 95, 0.1);
+  i {
+    color: $primary-green;
+  }
+}
+
+//tableau de stat
+div.stats-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.divTable.stats-table .divTableCell,
+.divTable.stats-table .divTableHead {
+  padding: 3px 2px;
+}
+.tc1 {
+  text-align: left;
+}
+.tc2 {
+  text-align: right;
+}
+
+hr.stats-table-spacer {
+  border-top: 1px solid white;
+}
+
+.divTable {
+  display: table;
+}
+.divTableRow {
+  display: table-row;
+}
+
+.divTableCell,
+.divTableHead {
+  display: table-cell;
+}
+.divTableBody {
+  display: table-row-group;
+}
+
+// list info client
+
+.info-client {
+  dt {
+    float: left;
+    width: 32%;
+    text-align: left;
+    font-weight: 500;
+    color: $black1;
+    i {
+      font-size: 12px;
+      color: $primary-green;
+    }
+  }
+  dd {
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
+  }
+  .break-line-info-client {
+    border-top: 1px solid #e8e8e8;
+    margin-bottom: 8px;
+    width: 68%;
+  }
+}
+
+.documents-client {
+  .doc-links {
+    text-align: center;
+    a {
+      padding: 8px 16px 8px 10px;
+      background-color: rgba(0, 151, 95, 0.1);
+      border-radius: 4px;
+      text-decoration: none;
+      color: $black1;
+      @include t-button;
+      margin: 0 auto 16px auto;
+      width: 30%;
+
+      i {
+        padding-right: 8px;
+        color: $primary-green;
+      }
+    }
+  }
+}
